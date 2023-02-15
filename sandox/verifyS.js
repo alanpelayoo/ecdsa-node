@@ -1,0 +1,10 @@
+const secp = require("ethereum-cryptography/secp256k1");
+
+
+const signature = "304402201c84f25a018ae3d34a45d163fdd0b8d7e03e351e0c6f2d5e7498dfa2b1ff256502202d6b7c336b5aaa4a8592fa7f1fb76be08c88c939bf500995e385c4e33f052d81"
+const messageHash = "c754c2de20fe7352415d41c8c411017f71e63d9885ba1dafd6af4753b003dc4d"
+const publicKey = "04abd53d498941bafbb8b35ba8bc20c92fca762a7b4eb12d4bf7a86c2c4c3188a77ee0e3f620e60263b8e000e7a94e12b7c2bc67c9e2713408d701f42e541d91db"
+
+const isSigned = secp.verify(signature, messageHash, publicKey);
+
+console.log(isSigned)
